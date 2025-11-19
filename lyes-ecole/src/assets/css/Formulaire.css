@@ -1,0 +1,296 @@
+/* === FORMULAIRE RESPONSIVE === */
+
+.formulaire {
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+.formulaire header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f2f2;
+  color: #1b4b73;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.formulaire h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.btn-back {
+  background: #1b4b73;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background: #153a5a;
+}
+
+/* Form Content */
+.form-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: #1b4b73;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1b4b73;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Tasks Section */
+.tasks-section {
+  margin: 2rem 0;
+}
+
+.tasks-section h3 {
+  color: #1b4b73;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.task-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 2px solid #e0e0e0;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr auto;
+}
+
+.task-item input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  grid-column: 1 / -1;
+}
+
+.task-item input:focus {
+  outline: none;
+  border-color: #1b4b73;
+}
+
+.task-item button {
+  grid-column: 2;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.task-item button:hover {
+  background: #c0392b;
+}
+
+/* Add Task Button */
+.btn-add-task {
+  background: #1b4b73;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background 0.3s;
+  margin-top: 0.5rem;
+}
+
+.btn-add-task:hover {
+  background: #153a5a;
+}
+
+/* Submit Button */
+.btn-submit {
+  background: #27ae60;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 2rem;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: #229954;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .formulaire header {
+    padding: 1rem;
+  }
+
+  .formulaire h1 {
+    font-size: 1.3rem;
+  }
+
+  .form-content {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  .task-item {
+    padding: 0.75rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .formulaire header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .formulaire h1 {
+    font-size: 1.1rem;
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-back {
+    order: 1;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .form-content {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .tasks-section h3 {
+    font-size: 1rem;
+  }
+
+  .task-item {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .task-item input {
+    font-size: 0.85rem;
+    padding: 0.45rem;
+  }
+
+  .task-item button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .btn-add-task {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Portrait Mode */
+@media (orientation: portrait) and (max-width: 768px) {
+  .form-content {
+    margin-top: 1rem;
+  }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) and (max-height: 600px) {
+  .formulaire header {
+    position: relative;
+  }
+
+  .form-content {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,363 @@
+/* === CHECKLIST RESPONSIVE === */
+
+.checklist-page {
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+.checklist-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f2f2;
+  color: #1b4b73;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.checklist-page h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.btn-back {
+  background: #1b4b73;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background: #153a5a;
+}
+
+/* Content */
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #1b4b73;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.8rem;
+  color: #1b4b73;
+}
+
+.content > p {
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+  color: #2c5a7a;
+  line-height: 1.5;
+}
+
+/* Tasks */
+.tasks {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 2px solid #e0e0e0;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-row label {
+  flex: 1;
+}
+
+.tasks label {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-size: 1rem;
+  background: #ffffff;
+  border: 1px solid transparent;
+}
+
+.tasks label:hover {
+  background: #f0f4f8;
+  border-color: #1b4b73;
+}
+
+.tasks input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: #27ae60;
+}
+
+.tasks input[type="checkbox"]:checked {
+  accent-color: #229954;
+}
+
+.tasks label:has(input[type="checkbox"]:checked) {
+  background: #ffffff;
+  border-color: #27ae60;
+}
+
+.tasks label:has(input[type="checkbox"]:checked) span {
+  color: #555;
+  font-weight: 500;
+}
+
+.tasks span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Delete Task Button */
+.btn-delete-task {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delete-task:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+/* Status */
+.status {
+  background: #1b4b73;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.status p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.status p:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Progress Bar */
+.progress-container {
+  background: rgba(255, 255, 255, 0.2);
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .checklist-page header {
+    padding: 1rem;
+  }
+
+  .checklist-page h1 {
+    font-size: 1.3rem;
+  }
+
+  .content {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content > p {
+    font-size: 0.95rem;
+  }
+
+  .tasks {
+    padding: 1.25rem;
+  }
+
+  .tasks label {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  .tasks input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  .status {
+    padding: 1.25rem;
+  }
+
+  .status p {
+    font-size: 1rem;
+  }
+
+  .status p:first-child {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .checklist-page header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .checklist-page h1 {
+    font-size: 1.1rem;
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-back {
+    order: 1;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .content {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .content > p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tasks {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .tasks label {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .tasks input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.75rem;
+  }
+
+  .tasks span {
+    font-size: 0.85rem;
+  }
+
+  .status {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .status p {
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+  }
+
+  .status p:first-child {
+    font-size: 1.05rem;
+  }
+}
+
+/* Portrait Mode */
+@media (orientation: portrait) and (max-width: 768px) {
+  .content {
+    margin-top: 1rem;
+  }
+
+  .tasks label {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tasks input[type="checkbox"] {
+    margin-top: 0.25rem;
+  }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) and (max-height: 600px) {
+  .checklist-page header {
+    position: relative;
+  }
+
+  .content {
+    margin: 1rem auto;
+    padding: 1.25rem;
+  }
+
+  .status {
+    padding: 1rem;
+  }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .content > p {
+    font-size: 0.85rem;
+  }
+
+  .tasks label {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .tasks input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
